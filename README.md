@@ -1,102 +1,72 @@
-# Bookstore Application
+# Website Penjualan Buku
 
-This is a Laravel-based Bookstore application. It provides functionalities for managing books, genres, orders, and users. The project uses Filament for the administration panel.
+## Deskripsi Singkat Proyek
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Admin Panel](#admin-panel)
-- [Contributing](#contributing)
-- [License](#license)
+Website Penjualan Buku merupakan aplikasi web yang digunakan untuk mengelola dan melakukan transaksi penjualan buku secara online. Aplikasi ini menyediakan fitur pengelolaan data buku, pengguna, serta proses pemesanan yang dapat diakses melalui browser.
 
-## Prerequisites
+Proyek ini dibuat sebagai bagian dari tugas perkuliahan dengan tujuan menerapkan konsep web dinamis menggunakan backend dan database.
 
-Before you begin, ensure you have met the following requirements:
-*   PHP >= 8.4
-*   Composer
-*   Node.js & npm (or Yarn)
-*   A database (e.g., SQLite, MySQL, PostgreSQL)
+## Fitur-Fitur Utama
 
-## Installation
+* Login dan Logout pengguna
+* Manajemen data buku (tambah, ubah, hapus, dan lihat buku)
+* Manajemen pengguna (admin dan user)
+* Proses pemesanan buku
+* Keranjang belanja
+* Riwayat transaksi
+* Tampilan antarmuka berbasis web yang sederhana dan mudah digunakan
 
-Follow these steps to set up the project locally:
+## Teknologi yang Digunakan
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/bookstore.git
-    cd bookstore
-    ```
+* Bahasa Pemrograman: PHP
+* Database: MySQL
+* Web Server: Apache (XAMPP)
+* Frontend: HTML, CSS, JavaScript (Bootstrap)
 
-2.  **Install PHP dependencies:**
-    ```bash
-    composer install
-    ```
+## Cara Menjalankan Website (Setup)
 
-3.  **Copy the environment file:**
-    ```bash
-    cp .env.example .env
-    ```
+1. Pastikan sudah menginstal **XAMPP** atau web server sejenis.
+2. Jalankan **Apache** dan **MySQL** melalui XAMPP Control Panel.
+3. Salin folder project ke dalam direktori:
 
-4.  **Generate application key:**
-    ```bash
-    php artisan key:generate
-    ```
+   ```
+   C:/xampp/htdocs/
+   ```
+4. Buat database baru di phpMyAdmin dengan nama:
 
-5.  **Configure your database:**
-    Edit the `.env` file and set your database credentials. For SQLite, you can use:
-    ```
-    DB_CONNECTION=sqlite
-    DB_DATABASE=/path/to/your/database.sqlite # Or database/database.sqlite
-    ```
+   ```
+   db_jualbuku
+   ```
+5. Import file database (`.sql`) yang tersedia di folder project ke database tersebut.
+6. Atur koneksi database pada file konfigurasi (contoh: `config/koneksi.php`) sesuai dengan pengaturan MySQL:
 
-6.  **Run migrations and seed the database (optional):**
-    ```bash
-    php artisan migrate --seed
-    ```
-    This will create the necessary tables and populate them with some dummy data (if seeders are configured).
+   ```php
+   $host = "localhost";
+   $user = "root";
+   $pass = "";
+   $db   = "db_jualbuku";
+   ```
+7. Buka browser dan akses aplikasi melalui URL:
 
-7.  **Install Node dependencies:**
-    ```bash
-    npm install
-    # or yarn install
-    ```
+   ```
+   http://localhost/penjualanbuku/
+   ```
+8. Website siap dijalankan.
 
-8.  **Compile front-end assets:**
-    ```bash
-    npm run dev
-    # or npm run build for production
-    ```
+## Akun Default (Jika Ada)
 
-9.  **Start the local development server:**
-    ```bash
-    php artisan serve
-    ```
+* **Admin**
 
-    The application will be accessible at `http://127.0.0.1:8000`.
+  * Username: admin
+  * Password: admin
 
-## Usage
+## Screenshot Tampilan Website
 
-*   Navigate to the base URL (`http://127.0.0.1:8000`) to access the public-facing bookstore.
-*   You can register as a new user or log in with existing credentials.
+Berikut adalah beberapa tampilan dari website:
 
-## Admin Panel
+* Halaman Login
+* Halaman Dashboard
+* Halaman Daftar Buku
+* Halaman Keranjang dan Transaksi
 
-The administration panel is built with Filament.
-*   Access the admin panel at `http://127.0.0.1:8000/admin`.
-*   Only users with `is_admin` set to `true` in the database can access the admin panel. You can create an admin user using a seeder or by manually updating the database.
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature-name`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some feature'`).
-5.  Push to the branch (`git push origin feature/your-feature-name`).
-6.  Open a Pull Request.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-This application is also open-sourced under the MIT license.
+(Screenshot diletakkan pada folder `screenshot/` di dalam repository)
