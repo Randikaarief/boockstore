@@ -13,7 +13,6 @@ Proyek ini dibuat sebagai bagian dari tugas perkuliahan dengan tujuan menerapkan
 * Manajemen pengguna (admin dan user)
 * Proses pemesanan buku
 * Keranjang belanja
-* Riwayat transaksi
 * Tampilan antarmuka berbasis web yang sederhana dan mudah digunakan
 
 ## Teknologi yang Digunakan
