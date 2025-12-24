@@ -35,7 +35,7 @@ Proyek ini dibuat sebagai bagian dari tugas perkuliahan dengan tujuan menerapkan
 4. Buat database baru di phpMyAdmin dengan nama:
 
    ```
-   db_jualbuku
+   bookstore
    ```
 5. Import file database (`.sql`) yang tersedia di folder project ke database tersebut.
 6. Atur koneksi database pada file konfigurasi (contoh: `config/koneksi.php`) sesuai dengan pengaturan MySQL:
@@ -44,7 +44,7 @@ Proyek ini dibuat sebagai bagian dari tugas perkuliahan dengan tujuan menerapkan
    $host = "localhost";
    $user = "root";
    $pass = "";
-   $db   = "db_jualbuku";
+   $db   = "bookstore";
    ```
 7. Buka browser dan akses aplikasi melalui URL:
 
@@ -57,8 +57,8 @@ Proyek ini dibuat sebagai bagian dari tugas perkuliahan dengan tujuan menerapkan
 
 * **Admin**
 
-  * Username: admin
-  * Password: admin
+  * Username: admin@example.com
+  * Password: password
 
 ## Screenshot Tampilan Website
 
